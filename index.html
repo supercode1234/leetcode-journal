@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode Journal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    .motivation {
+      font-style: italic;
+      color: #555;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .entry {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-left: 5px solid #007bff;
+      background-color: #f9f9f9;
+    }
+    .entry h2 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    .entry p {
+      margin: 5px 0;
+    }
+    .entry a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .entry a:hover {
+      text-decoration: underline;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
+    code {
+      font-family: Consolas, monospace;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>My LeetCode Journal</h1>
+  <p class="motivation">1% daily improvement!</p>
+
+  <!-- Example Entry -->
+  <div class="entry">
+    <h2>Problem #289: Game of Life</h2>
+    <p><strong>Date:</strong> 2025-03-16</p>
+    <p><strong>Difficulty:</strong> Medium</p>
+    <p><strong>Time Spent:</strong> 25 min</p>
+    <p><strong>Completely solved?</strong> no yet</p>
+    <p><strong>Problem Link:</strong> <a href="https://leetcode.com/problems/game-of-life/" target="_blank">Game of Life</a></p>
+    <p><strong>Thoughts & Learned:</strong> This problem was pretty hard, but I learned that when you encounter a 2D array matrix problem, the first step is to traverse the matrix.</p>
+
+    <!-- Collapsible Code Section -->
+      <pre><code>
+class Solution {
+  public void gameOfLife(int[][] board) {
+    int m = board.length;
+    int n = board[0].length;
+
+    // Print initial board
+    for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+        System.out.print(board[i][j] + " ");
+      }
+      System.out.println();
+    }
+  }
+}
+      </code></pre>
+  </div>
+
+  <footer>
+    let's do it
+  </footer>
+</body>
+</html>
