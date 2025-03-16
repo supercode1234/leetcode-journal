@@ -51,7 +51,6 @@
       font-family: Consolas, monospace;
       color: #333;
     }
-
     footer {
       text-align: center;
       margin-top: 40px;
@@ -60,7 +59,7 @@
   </style>
 </head>
 <body>
-  <h1>My LeetCode Journal</h1>
+  <h1 id="top">My LeetCode Journal</h1>
   <p class="motivation">1% daily improvement!</p>
 
   <!-- Example Entry -->
@@ -69,11 +68,13 @@
     <p><strong>Date:</strong> 2025-03-16</p>
     <p><strong>Difficulty:</strong> Medium</p>
     <p><strong>Time Spent:</strong> 25 min</p>
-    <p><strong>Completely solved?</strong> no yet</p>
+    <p><strong>Completely solved?</strong> Not yet</p>
     <p><strong>Problem Link:</strong> <a href="https://leetcode.com/problems/game-of-life/" target="_blank">Game of Life</a></p>
     <p><strong>Thoughts & Learned:</strong> This problem was pretty hard, but I learned that when you encounter a 2D array matrix problem, the first step is to traverse the matrix.</p>
 
     <!-- Collapsible Code Section -->
+    <details>
+      <summary>View Code</summary>
       <pre><code>
 class Solution {
   public void gameOfLife(int[][] board) {
@@ -90,10 +91,55 @@ class Solution {
   }
 }
       </code></pre>
+    </details>
+    <p><a href="#top">Back to Top</a></p>
+  </div>
+
+  <!-- Example Entry -->
+  <div class="entry">
+    <h2>Problem #228: Summary Ranges</h2>
+    <p><strong>Date:</strong> 2025-03-15</p>
+    <p><strong>Difficulty:</strong> Easy</p>
+    <p><strong>Time Spent:</strong> 25 min</p>
+    <p><strong>Completely solved?</strong> Yep</p>
+    <p><strong>Problem Link:</strong> <a href="https://leetcode.com/problems/summary-ranges/" target="_blank">Summary Ranges</a></p>
+    <p><strong>Thoughts & Learned:</strong> I learned that it's an ArrayList of Strings.</p>
+
+    <!-- Collapsible Code Section -->
+    <details>
+      <summary>View Code</summary>
+      <pre><code>
+class Solution {
+  public List<String> summaryRanges(int[] nums) {
+    List<String> result = new ArrayList<>();
+    if (nums.length == 0) return result;
+
+    int start = nums[0]; // Start of the range
+
+    for (int i = 1; i < nums.length; i++) {
+      // If non-consecutive, finalize the previous range
+      if (nums[i] != nums[i - 1] + 1) {
+        result.add(formatRange(start, nums[i - 1]));
+        start = nums[i]; // Start new range
+      }
+    }
+
+    // Add the last range
+    result.add(formatRange(start, nums[nums.length - 1]));
+    return result;
+  }
+
+  private String formatRange(int start, int end) {
+    return start == end ? String.valueOf(start) : start + "->" + end;
+  }
+}
+      </code></pre>
+    </details>
+    <p><a href="#top">Back to Top</a></p>
   </div>
 
   <footer>
-    let's do it
+    Let's do it!
   </footer>
 </body>
 </html>
