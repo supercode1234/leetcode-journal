@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LeetCode Journal</title>
+  <!-- Prism.js CSS (Coy Theme) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css"
+  />
+  <!-- Prism.js Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <!-- Prism.js Language Support (Java) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,7 +49,7 @@
       text-decoration: underline;
     }
     pre {
-      background-color: #f4f4f4;
+      background-color: #f5f2f0; /* Light background for code blocks */
       padding: 10px;
       border-radius: 5px;
       overflow-x: auto;
@@ -49,7 +58,15 @@
     }
     code {
       font-family: Consolas, monospace;
-      color: #333;
+      color: #333; /* Dark text color for code */
+    }
+    details {
+      margin: 10px 0;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #007bff;
     }
     footer {
       text-align: center;
@@ -62,7 +79,7 @@
   <h1 id="top">My LeetCode Journal</h1>
   <p class="motivation">1% daily improvement!</p>
 
-  <!-- Example Entry -->
+  <!-- Problem #289: Game of Life -->
   <div class="entry">
     <h2>Problem #289: Game of Life</h2>
     <p><strong>Date:</strong> 2025-03-16</p>
@@ -75,7 +92,7 @@
     <!-- Collapsible Code Section -->
     <details>
       <summary>View Code</summary>
-      <pre><code>
+      <pre><code class="language-java">
 class Solution {
   public void gameOfLife(int[][] board) {
     int m = board.length;
@@ -95,7 +112,7 @@ class Solution {
     <p><a href="#top">Back to Top</a></p>
   </div>
 
-  <!-- Example Entry -->
+  <!-- Problem #228: Summary Ranges -->
   <div class="entry">
     <h2>Problem #228: Summary Ranges</h2>
     <p><strong>Date:</strong> 2025-03-15</p>
@@ -108,7 +125,7 @@ class Solution {
     <!-- Collapsible Code Section -->
     <details>
       <summary>View Code</summary>
-      <pre><code>
+      <pre><code class="language-java">
 class Solution {
   public List<String> summaryRanges(int[] nums) {
     List<String> result = new ArrayList<>();
